@@ -6,9 +6,9 @@ phases:
 
   build:
     commands:
-      - dotnet restore Poc-LR/Poc-LR.csproj
-      - dotnet build Poc-LR/Poc-LR.csproj
-      - dotnet publish Poc-LR/Poc-LR.csproj -o ./main      
+      - dotnet restore Poc-LR.csproj
+      - dotnet build Poc-LR.csproj
+      - dotnet publish Poc-LR.csproj -o ./main      
 artifacts:
   files:
     - '**/*'
