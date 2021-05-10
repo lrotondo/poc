@@ -1,9 +1,8 @@
 version: 0.0
 Resources:
-    - autovisionfunction:
-        Type: AWS::Lambda::Function
-        Properties:
-            Name: "autovisionfunction"
-            Alias: "staging"
-            CurrentVersion: "1"
-            TargetVersion: "2"
+    ApiDeployment:
+    Type: 'AWS::ApiGateway::Deployment'
+    Properties:
+      RestApiId: !Ref ServerlessRestApi
+      Description: !Sub "RestApi deployment Version: ${ApiVersion}"
+      StageName: !Ref EnvironmentName
